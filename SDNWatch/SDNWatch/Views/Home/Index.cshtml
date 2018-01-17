@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "SDN Entry Change Log";
+    List<SDNWatch.Models.SdnEntry> Changes = ViewBag.Changes as List<SDNWatch.Models.SdnEntry>;
+}
+<h1>@ViewBag.Title</h1>
+@{
+    foreach (var entry in Changes)
+    {
+        <div class="container">
+            <label>a change has been made : </label>
+            <p>@(entry.lastName)</p>
+            <p>@(entry.changeType)</p>
+            <p>@(entry.changetime)</p>
+        </div>
+    }
+ }
